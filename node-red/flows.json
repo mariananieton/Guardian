@@ -1,0 +1,153 @@
+[
+    {
+        "id": "39e3fc7d85f642c1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce5a667bb0070f88",
+        "type": "mqtt in",
+        "z": "39e3fc7d85f642c1",
+        "name": "",
+        "topic": "/temp",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "fa412d67e674f1a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "461361d2ee5cedaa"
+            ]
+        ]
+    },
+    {
+        "id": "e5ad4072c24c95ae",
+        "type": "mqtt in",
+        "z": "39e3fc7d85f642c1",
+        "name": "",
+        "topic": "/hum",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "fa412d67e674f1a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "9b54671ed4428840"
+            ]
+        ]
+    },
+    {
+        "id": "461361d2ee5cedaa",
+        "type": "ui_gauge",
+        "z": "39e3fc7d85f642c1",
+        "name": "Temperatura",
+        "group": "4edc589950bb371d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#f00a0a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9b54671ed4428840",
+        "type": "ui_gauge",
+        "z": "39e3fc7d85f642c1",
+        "name": "Umidade",
+        "group": "4edc589950bb371d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#21e42e",
+            "#e6e600",
+            "#00bfe6"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 420,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fa412d67e674f1a9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4edc589950bb371d",
+        "type": "ui_group",
+        "name": "",
+        "tab": "d243837f0d8435ba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d243837f0d8435ba",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
